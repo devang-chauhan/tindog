@@ -10,16 +10,39 @@ body {
 .viewport {
     height: 600px;
     width: 400px;
-    border: 5px dotted black
 }
 
 main {
     display: flex;
     justify-content: center;
-    border: 1px solid red;
 }
 
-img {
+nav {
+    padding: 19px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav svg {
+    width: 34px;
+    height: 34px;
+}
+
+#paw {
+    width: 20px;
+    height: 20px;
+    padding: 11px 32px;
+    border-radius: 25px;
+    background: linear-gradient(to left, #F83375 2.5%, #F83773 2.5%, #FA695A);
+}
+
+#paw path {
+    fill: white;
+}
+
+
+
+main img {
     width: 98%;
     height: 550px;
     object-fit: cover;
