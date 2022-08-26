@@ -1,0 +1,28 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.viewport {
+    height: 600px;
+    width: 400px;
+    border: 5px dotted black
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    border: 1px solid red;
+}
+
+img {
+    width: 98%;
+    height: 550px;
+    object-fit: cover;
+
+    border-radius: 15px;
+}
