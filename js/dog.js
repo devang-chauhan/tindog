@@ -9,7 +9,17 @@ class Dog{
     }
     getHTML() {
         return `
+
             <img src=${this.avatar} alt=${this.bio}>
+
+        `;
+    }
+    showStatus() {
+        return `
+        <div>
+        <p>Swiped? ${this.hasBeenSwiped} liked? ${this.hasBeenLiked}</p>
+            <img src=${this.avatar} alt=${this.bio}>
+        </div>
         `;
     }
 }
