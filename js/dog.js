@@ -1,17 +1,36 @@
 
+/**
+ * Dog object constructor.
+ */
 class Dog{
+    /**
+     * Assign properties to the Dog object.
+     * @param {*} data - JSON object.
+     */
     constructor(data) {
         Object.assign(this, data);
     }
+    /**
+     * Based on the choice made on the UI, update the status of the Dog object.
+     * @param {bool} choice - A boolean to indicate liked or disliked status of the 
+     */
     setMatchStatus(choice) {
         this.hasBeenLiked = choice;
         this.hasBeenSwiped = true;
     }
+    /**
+     * 
+     * @returns HTML to render the Dog image on screen.
+     */
     getHTML() {
         return `
             <img src=${this.avatar} alt=${this.bio}>
         `;
     }
+    /**
+     * 
+     * @returns HTMl to show status of the current Dog on the screen.
+     */
     showStatus() {
         return `
         <div>
