@@ -8,26 +8,33 @@ const likeEl = document.getElementById("like");
 // an array of Dog objects
 const dogs = data.map(dog => new Dog(dog));
 
-
-// Render first Dog
-let count = 0;
+// temporary variable
 let currentDog = '';
 
 
 function updateDog() {
     currentDog = dogs.shift();
-    mainEl.innerHTML = currentDog.getHTML();
+    if (currentDog) {
+        mainEl.innerHTML = currentDog.getHTML();
+    } else {
+        mainEl.innerHTML = `
+            <div><p>No more dogs in your area.</p></div>
+        `;
+    }
+    
 }
 
 function updateStatus(choice) {
-    currentDog.setMatchStatus(choice);
+    if (currentDog) {
+        currentDog.setMatchStatus(choice);
     mainEl.innerHTML = currentDog.showStatus();
+    }
 }
 
 
 function run(choice) {
     updateStatus(choice);
-    setTimeout(updateDog, 2000);    
+    setTimeout(updateDog, 1000);    
     
 }
 

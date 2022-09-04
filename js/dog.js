@@ -9,9 +9,7 @@ class Dog{
     }
     getHTML() {
         return `
-
             <img src=${this.avatar} alt=${this.bio}>
-
         `;
     }
     showStatus() {
