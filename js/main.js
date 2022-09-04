@@ -40,4 +40,4 @@ function run(choice) {
 
 updateDog();
 likeEl.addEventListener("click", () => run(true));
-
+disLikeEl.addEventListener("click", () => run(false));
