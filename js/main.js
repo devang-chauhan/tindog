@@ -11,6 +11,6 @@ const reloadEl = document.getElementById("reload");
 const dogs = data.map(dog => new Dog(dog));
 
 updateDog(dogs, mainEl);
-likeEl.addEventListener("click", () => update(true, dogs, mainEl));
-disLikeEl.addEventListener("click", () => update(false, dogs, mainEl));
+likeEl.addEventListener("click", () => update(true, dogs, mainEl, likeEl));
+disLikeEl.addEventListener("click", () => update(false, dogs, mainEl, disLikeEl));
 reloadEl.addEventListener("click", () => location.reload());

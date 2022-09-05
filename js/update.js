@@ -47,9 +47,13 @@ function updateStatus(choice, dog, el) {
  * @param {Array[Dog]} dogArray - An array of Dog object. 
  * @param {Element} el - Element from DOM to manipulate
  */
-function update(choice, dogs, el) {
+function update(choice, dogs, el, btnEl) {
     updateStatus(choice, currentDog, el);
-    setTimeout(function () { updateDog(dogs, el); }, 2000);   
+    btnEl.disabled = true;
+    setTimeout(function () {
+        updateDog(dogs, el);
+        btnEl.disabled = false;
+    }, 2000);   
 }
 
 
