@@ -24,7 +24,15 @@ class Dog{
      */
     getHTML() {
         return `
+            
             <img src=${this.avatar} alt=${this.bio}>
+            <div class="dog-profile">
+                <div class="dog-text">
+                    <h2>${this.name}, ${this.age}</h2>
+                    <p>${this.bio}</p>
+                </div>
+            </div>
+            
         `;
     }
     /**
