@@ -19,7 +19,7 @@ function updateDog(dogArray, el) {
         el.innerHTML = currentDog.getHTML();
     } else {
         el.innerHTML = `
-            <div><p>No more dogs in your area.</p></div>
+            <div class="dog message"><p>No more dogs in your area.</p></div>
         `;
     }
 }
@@ -49,7 +49,7 @@ function updateStatus(choice, dog, el) {
  */
 function update(choice, dogs, el) {
     updateStatus(choice, currentDog, el);
-    setTimeout(function () { updateDog(dogs, el); }, 50000);   
+    setTimeout(function () { updateDog(dogs, el); }, 2000);   
 }
 
 

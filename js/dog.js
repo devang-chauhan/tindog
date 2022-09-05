@@ -40,10 +40,8 @@ class Dog{
     showStatus() {
         return this.getHTML() + `
             <div class="dog status">
-                <div class="status-container">
-                    <div class="status-border ${this.hasBeenLiked ? "like-border" : "nope-border"}">
-                        <h2 class=${this.hasBeenLiked ? "like" : "nope"}>${this.hasBeenLiked ? "LIKE" : "NOPE"}</h2>
-                    </div>
+                <div class="status-tag">
+                    <img src=${this.hasBeenLiked? "images/icons/like-image.png": "images/icons/nope-image.png"}>
                 </div>
             </div>
         `;
