@@ -1,5 +1,5 @@
-# Tindog ~ Tinder for Dogs.
+### Tindog ~ Tinder for Dogs.
 
-### A basic web app interface created with vanilla JS and CSS.
+A basic web app interface created with vanilla JS and CSS.
 
 ![App](/images/tindog.png)
