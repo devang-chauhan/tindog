@@ -49,7 +49,7 @@ function updateStatus(choice, dog, el) {
  */
 function update(choice, dogs, el) {
     updateStatus(choice, currentDog, el);
-    setTimeout(function () { updateDog(dogs, el); }, 1000);   
+    setTimeout(function () { updateDog(dogs, el); }, 50000);   
 }
 
 

@@ -24,15 +24,13 @@ class Dog{
      */
     getHTML() {
         return `
-            
             <img src=${this.avatar} alt=${this.bio}>
-            <div class="dog-profile">
-                <div class="dog-text">
+            <div class="dog bio">
+                <div class="profile">
                     <h2>${this.name}, ${this.age}</h2>
                     <p>${this.bio}</p>
                 </div>
             </div>
-            
         `;
     }
     /**
@@ -40,11 +38,14 @@ class Dog{
      * @returns HTMl to show status of the current Dog on the screen.
      */
     showStatus() {
-        return `
-        <div>
-        <p>Swiped? ${this.hasBeenSwiped} liked? ${this.hasBeenLiked}</p>
-            <img src=${this.avatar} alt=${this.bio}>
-        </div>
+        return this.getHTML() + `
+            <div class="dog status">
+                <div class="status-container">
+                    <div class="status-border ${this.hasBeenLiked ? "like-border" : "nope-border"}">
+                        <h2 class=${this.hasBeenLiked ? "like" : "nope"}>${this.hasBeenLiked ? "LIKE" : "NOPE"}</h2>
+                    </div>
+                </div>
+            </div>
         `;
     }
 }

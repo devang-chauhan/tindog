@@ -18,7 +18,7 @@ body {
     box-sizing: border-box;
 }
 
-
+/* nav */
 nav {
     height: 8%;
     display: flex;
@@ -38,6 +38,11 @@ nav {
     height: 34px;
 }
 
+.nav-container button {
+    border: 0;
+    background: white;
+}
+
 #paw {
     padding: 0.5em 2em;
     border-radius: 34px;
@@ -48,7 +53,7 @@ nav {
     fill: white;
 }
 
-
+/* profile */
 main {
     height: 78%;
     display: flex;
@@ -56,46 +61,79 @@ main {
     position: relative;
 }
 
-.dog-profile {
-    color: white;
+.dog {
     position: absolute;
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
 }
 
-.dog-text {
+.status {
+    justify-content: flex-start;
+}
+
+.status-container {
+    padding: 3em 0 0 1.5em;
+}
+
+.status-border {
+    width: fit-content;
+    transform: rotate(-30deg);
+    border: 5px solid red;
+}
+
+.nope-border {
+    border-image: linear-gradient(to right, #F9655C, #F83574) 1;
+}
+
+.like-border {
+    border-image: linear-gradient(to right, #29D78A, #6EF2F2) 1;
+}
+
+.status-border h2 {
+    font-weight: 600;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0 0.5em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nope {
+    background: -webkit-linear-gradient(#F9655C, #F83574);
+}
+
+.like {
+    background: -webkit-linear-gradient(#29D78A, #6EF2F2);
+}
+
+
+
+.bio {
+    justify-content: flex-end;
+    color: white;
+}
+
+.profile {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0 0 1em 1em;
 }
 
-.dog-text h2 {
+.profile h2 {
     margin: 0px;
     font-weight: 500;
     font-size: 1.8rem;
 }
 
-.dog-text p {
+.profile p {
     margin: 0px;
     font-weight: 200;
     font-size: 1.2rem;
 }
 
-
-.end-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.end-container p {
-    font-size: 1.5rem;
-    color: #d9dee6;
-}
 
 img {
     width: 98%;
@@ -103,6 +141,8 @@ img {
     border-radius: 15px;
 }
 
+
+/* footer */
 footer {
     height: 20%;
     display: flex;
@@ -115,7 +155,7 @@ footer {
     justify-content: center;
 }
 
-button {
+.footer-container button {
     border: 0px;
     background: white;
     border-radius: 100%;
@@ -137,6 +177,7 @@ svg {
     width: 40px;
 }
 
+/* media-query */
 @media screen and (min-width:415px) {
     .viewport {
         max-width: 414px;
